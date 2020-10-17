@@ -9,11 +9,20 @@
 
 <body>
 	<div id="calculator">
-		<h1> Calculator </h1>
+		<h2> Basic Calculator </h2>
 		<form name="calculator">
-			<input type="number" id="number1" placeholder="Please enter number" maxlength="10" />
-			<input type="number" id="number2" placeholder="Please enter number"  maxlength="10" />
-			<input type="button" onclick="Calculate();" id="calculate" value="Result">
+			<input type="number" id="number1" placeholder="Enter no. 1" maxlength="10" /> <br>
+			<input type="number" id="number2" placeholder="Enter no. 2"  maxlength="10" /> <br>
+			<label for="operator"><h4>Select Operator:</h4></label>
+			<select name="operator" id="operator">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+			</select> <br>
+			<input type="button" onclick="Calculate();" id="calculate" value="Calculate"> <br>
+			<h4>Answer is:</h4>
+			<input type="number" id="answer"/>
 		</form>
 	</div>
 	<script src="script.js"></script>
