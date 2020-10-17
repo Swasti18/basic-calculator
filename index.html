@@ -4,26 +4,33 @@
 <head>
 	<meta charset="utf-8">
 	<title>JavaScript Calculator</title>
-	<link rel="stylesheet" href="css/styles.css?v=1.0">
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<div id="calculator">
+	<div id="container">
 		<h2> Basic Calculator </h2>
-		<form name="calculator">
-			<input type="number" id="number1" placeholder="Enter no. 1" maxlength="10" /> <br>
-			<input type="number" id="number2" placeholder="Enter no. 2"  maxlength="10" /> <br>
-			<label for="operator"><h4>Select Operator:</h4></label>
-			<select name="operator" id="operator">
-				<option value="+">+</option>
-				<option value="-">-</option>
-				<option value="*">*</option>
-				<option value="/">/</option>
-			</select> <br>
-			<input type="button" onclick="Calculate();" id="calculate" value="Calculate"> <br>
-			<h4>Answer is:</h4>
-			<input type="number" id="answer"/>
-		</form>
+		<div id="calculator">
+			<div>
+				<input type="number" id="number1" placeholder="Enter no. 1" maxlength="4" />
+				<input type="number" id="number2" placeholder="Enter no. 2" maxLength="10" />
+			</div>
+			<div>
+				<label for="operator" class="operator-label">Select Operator:</label>
+				<select name="operator" id="operator">
+					<option value="+">+</option>
+					<option value="-">-</option>
+					<option value="*">*</option>
+					<option value="/">/</option>
+				</select>
+				<input type="button" onclick="Calculate();" id="calculate" value="Calculate">
+			</div>
+			<div>
+				<span class="operator-label">Result is:</span>
+				<input type="number" id="answer" disabled />
+			</div>
+		</div>
+		
 	</div>
 	<script src="script.js"></script>
 </body>
